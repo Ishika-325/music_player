@@ -26,27 +26,31 @@ export const AnimatedTooltip = ({
 
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
-    springConfig,
+    springConfig
   );
   const translateX = useSpring(
     useTransform(x, [-100, 100], [-50, 50]),
-    springConfig,
+    springConfig
   );
 
-  const handleMouseMove = (event: any) => {
+  // ✅ FIXED TYPE HERE
+  const handleMouseMove = (
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) => {
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
 
     animationFrameRef.current = requestAnimationFrame(() => {
-      const halfWidth = event.target.offsetWidth / 2;
+      const target = event.currentTarget as HTMLImageElement;
+      const halfWidth = target.offsetWidth / 2;
       x.set(event.nativeEvent.offsetX - halfWidth);
     });
   };
 
   return (
     <>
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <div
           className="group relative -mr-4"
           key={item.name}

@@ -3,7 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from './ui/moving-border'
 import { HoverEffect } from './ui/card-hover-effect';
-import { useEffect } from 'react';
 function UpcomingWebinars() {
     const featuredWebinars = [
     {

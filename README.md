@@ -24,4 +24,4 @@ It’s a simple yet elegant **music course website UI** designed to provide a mo
 
 ---
 
-## Deployed on vercel link - 
+## Deployed on vercel link - https://music-player-rose-chi.vercel.app/
