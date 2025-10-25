@@ -29,12 +29,12 @@ function page() {
           
           <form onSubmit={handleSubmit} className="flex flex-col gap-8">
             
-            <label className="flex flex-col gap-3 ">Email : 
+            
               <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required className="border border-neutral-800 focus:ring-4 focus:ring-teal-900 rounded-md p-2 bg-black" />
-            </label>
-            <label className="flex flex-col gap-3">Message : 
+           
+            
               <textarea  placeholder="Message" onChange={(e) => setMessage(e.target.value)} required rows={4} className="border border-neutral-800 focus:ring-4 focus:ring-teal-900 rounded-md p-2 bg-black" />
-            </label>
+       
             <button type="submit" className="p-2 rounded-md border border-gray-500 w-fit px-6 bg-teal-500 hover:bg-teal-600">Send Message</button>
           </form>
         </div>
